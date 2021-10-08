@@ -1,3 +1,7 @@
+h1, h2, h3, p, a {
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 /* First Section Default  */
 
 .first-sec {
@@ -102,7 +106,7 @@
 
 .first-sec .custom-section .col-lg-8 img {
     left: 50rem;
-    width: 40%;
+    width: 37%;
     position: absolute;
     top: 6rem;
 }
@@ -163,7 +167,7 @@
     text-align: center;
     margin: 0 0 40px;
     padding-bottom: 20px;
-    filter: drop-shadow(1px 1px 1px #222);
+    filter: drop-shadow(1px 0.5px 0.5px #222);
 }
 
 .second-sec ul {
@@ -377,14 +381,30 @@
 
 .third-sec .cnt-block mat-icon.play {
     display: none;
-    font-size: 70px;
-    margin-top: -45px;
-    margin-left: -40px;
-    color: #f50057;
+    font-size: 150px;
+    color: #fff;
+    transform: translate(-63px, -160px);
+}
+
+.third-sec .cnt-block:hover {
+    background: #fff;
+}
+
+.third-sec .cnt-block:hover mat-icon {
+    color: #fff;
 }
 
 .third-sec .cnt-block:hover mat-icon.play {
+    color: gray;
     display: inline-block;
+}
+
+.third-sec .cnt-block:hover h3 {
+    color: #fff;
+}
+
+.third-sec .cnt-block:hover p {
+    color: #fff;
 }
 
 /* Third Section Mobile */
@@ -406,6 +426,9 @@
     .third-sec .cnt-block:hover mat-icon.play {
         display: none;
     }
+    .third-sec .cnt-block:hover {
+        background: #fff;
+    }
     .third-sec .cnt-block a {
         display: inline-block;
         font-size: 24px;
@@ -418,6 +441,12 @@
     }
     .third-sec .cnt-block:hover a {
         display: inline-block;
+    }
+    .third-sec .cnt-block:hover h3 {
+        color: #0d47a1;
+    }
+    .third-sec .cnt-block:hover p {
+        color: gray;
     }
 }
 
@@ -466,7 +495,7 @@
     color: #1a237e;
     font-size: 22px;
     margin-top: 20px;
-    line-height: 1;
+    line-height: 1.3;
 }
 
 /* Fourth Section Mobile */
@@ -577,16 +606,6 @@
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-.fifth-sec .footer {
-    display: flex;
-    justify-content: center;
-    line-height: 1.5;
-    font-weight: bold;
-    color: #222;
-    font-size: 18px;
-    padding-bottom: 6px;
-}
-
 .fifth-sec mat-icon {
     display: none;
 }
@@ -597,7 +616,7 @@
     .fifth-sec .column-one {
         width: 100%;
         text-align: center;
-        padding: 40px 5px 5px 5px;
+        padding: 30px 5px 30px 5px;
     }
     .fifth-sec .column-two {
         display: none;
@@ -620,16 +639,12 @@
     }
     .fifth-sec .xl-font {
         font-size: 32px;
-        filter: drop-shadow(1px 1px 1px #222);
     }
     .fifth-sec mat-icon {
         display: inline-block;
         color: #1a237e;
         font-size: 56px;
         margin: 0 25px 0 0;
-    }
-    .fifth-sec .footer {
-        padding-top: 20px;
     }
 }
 
@@ -640,5 +655,80 @@
         float: left;
         width: 50%;
         padding: 0px 40px;
+    }
+}
+
+/* Sixth Section */
+
+.sixth-sec {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.sixth-sec .custom-section .col-lg-6 {
+    margin-top: 10px;
+}
+
+.sixth-sec .custom-section .col-lg-6 h3 {
+    font-weight: 300;
+    font-size: 54px;
+    color: #fff;
+    line-height: 1;
+    filter: drop-shadow(1px 1px 1px #222);
+}
+
+.sixth-sec .custom-section .col-lg-6 p {
+    color: #f73378;
+    font-size: 28px;
+    margin-top: 20px;
+    filter: drop-shadow(1px 1px 1px #222);
+}
+
+.sixth-sec .custom-section .col-lg-6 a {
+    display: inline-block;
+    font-weight: 300;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.sixth-sec .custom-section .col-lg-6 img {
+    left: 8rem;
+    width: 50%;
+    position: relative;
+}
+
+/* Sixth Section Mobile */
+
+@media screen and (max-width: 766px) {
+    .sixth-sec {
+        text-align: center;
+    }
+    .custom-section {
+        flex-direction: column-reverse;
+    }
+    .sixth-sec .custom-section .col-lg-6 h3 {
+        font-weight: 200;
+        font-size: 39px;
+    }
+    .sixth-sec .custom-section .col-lg-6 img {
+        display: none;
+    }
+    .sixth-sec .custom-section .col-lg-6 a {
+        font-size: 16px;
+    }
+    .sixth-sec .custom-section .col-lg-6 a mat-icon {
+        font-size: 22px;
+    }
+}
+
+/* Sixth Section iPad  */
+
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+    .sixth-sec .custom-section .col-lg-6 img {
+        width: 40%;
+        position: relative;
+        top: 0;
     }
 }
