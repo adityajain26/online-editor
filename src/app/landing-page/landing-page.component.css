@@ -321,7 +321,7 @@ h1, h2, h3, p, a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border: 0;
     transition: all 500ms ease;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .third-sec .cnt-block {
@@ -395,7 +395,7 @@ h1, h2, h3, p, a {
 }
 
 .third-sec .cnt-block:hover mat-icon.play {
-    color: gray;
+    color: #f73378;
     display: inline-block;
 }
 
