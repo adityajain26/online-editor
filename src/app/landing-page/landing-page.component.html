@@ -2,7 +2,7 @@
 <section class="first-sec">
     <header class="head">
         <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" (click)="navigateToLex()">
                 <img src="../../assets/logo.svg" alt="website logo">
                 <span>Online Editor</span>
             </a>
@@ -12,19 +12,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#">Home</a>
+                        <a class="nav-link" data-bs-toggle="collapse" matTooltip="Features"
+                            (click)="scroll(target2)">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#">Features</a>
+                        <a class="nav-link" data-bs-toggle="collapse" matTooltip="Explore"
+                            (click)="scroll(target3)">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#">Explore</a>
+                        <a class="nav-link" data-bs-toggle="collapse" matTooltip="Get Started"
+                            (click)="scroll(target)">Get Started</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#">Get Started</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#" matTooltip="Contact Support"><mat-icon>contact_support</mat-icon></a>
+                        <a class="nav-link" data-bs-toggle="collapse" (click)="scroll(target4)"
+                            matTooltip="Contact Support">
+                            <mat-icon>contact_support</mat-icon>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +40,45 @@
                 <h3>Rapid Web Development</h3>
                 <p>Code In Browser</p>
                 <p>Create & Share Collaborative Sandboxes!</p>
-                <a href="#">Get Started</a>
+                <div (mouseout)="triggerbtnClose()">
+                    <a id="button2" matTooltip="Dashboard" [ngClass]="{'animateUp' : flagBtn, 'hide' : !flagBtn}"
+                        (mouseover)="triggerbtnOpen()" (click)="navigateTo('dashboard')">
+                        <mat-icon>dashboard</mat-icon>
+                    </a>
+                    <a id="button1" [ngClass]="{'hide' : flagBtn}" (mouseover)="triggerbtnOpen()">GET STARTED
+                        <span>
+                            <svg width="56px" height="30px" viewBox="0 0 66 43" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path class="one"
+                                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path class="two"
+                                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path class="three"
+                                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                    <!-- <span style="color: #fff01f; font-weight: bold;">>>></span> -->
+                    <a id="button3" matTooltip="Public Snippets"
+                        [ngClass]="{'animateLeft' : flagBtn, 'hide' : !flagBtn}" (mouseover)="triggerbtnOpen()"
+                        (click)="navigateTo('public')">
+                        <mat-icon>public</mat-icon>
+                    </a>
+                    <a id="button4" matTooltip="Private Snippets"
+                        [ngClass]="{'animateRight' : flagBtn, 'hide' : !flagBtn}" (mouseover)="triggerbtnOpen()"
+                        (click)="navigateTo('private')">
+                        <mat-icon>vpn_lock</mat-icon>
+                    </a>
+                    <a id="button5" matTooltip="Start Coding" [ngClass]="{'animateDown' : flagBtn, 'hide' : !flagBtn}"
+                        (mouseover)="triggerbtnOpen()" (click)="scroll(target)">
+                        <mat-icon>code</mat-icon>
+                    </a>
+                </div>
             </div>
             <div class="col-12 col-lg-8">
                 <img src="../../assets/code.svg">
@@ -49,26 +90,46 @@
 <!-- Second Section  -->
 <section class="second-sec padding-lg">
     <div class="container-fluid">
+        <div class="container logos">
+            <div class="row logo-heading">
+                <h2>Code and Practice in</h2>
+            </div>
+            <div class="row">
+                <div class="col"><img src="../../assets/nodejs-icon.svg" matTooltip="Node.js"
+                        (click)="runCode('nodejs')" alt="nodejs"></div>
+                <div class="col"><img src="../../assets/angular-icon.svg" matTooltip="Angular"
+                        (click)="runCode('angular')" alt="angular"></div>
+                <div class="col"><img src="../../assets/react-icon.svg" matTooltip="React.js" (click)="runCode('react')"
+                        alt="react"></div>
+                <div class="col"><img src="../../assets/html-icon.svg" matTooltip="HTML5" (click)="runCode('fewd')"
+                        alt="html"></div>
+                <div class="col"><img src="../../assets/css-icon.svg" matTooltip="CSS3" (click)="runCode('fewd')"
+                        alt="css">
+                </div>
+                <div class="col"><img src="../../assets/js-icon.svg" matTooltip="Javascript" (click)="runCode('fewd')"
+                        alt="js"></div>
+            </div>
+        </div>
         <div class="row heading heading-icon">
             <h2>Be A Part Of The Workspace</h2>
         </div>
         <ul class="row">
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>1.3K</h1>
-                    <h3>Total Unique Users</h3>
+                    <h1>{{users}}</h1>
+                    <h3>Unique Users</h3>
                 </div>
             </li>
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>100</h1>
-                    <h3>Live Public Snippets</h3>
+                    <h1>{{projects}}</h1>
+                    <h3>Projects Created</h3>
                 </div>
             </li>
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>3</h1>
-                    <h3>Live Languages</h3>
+                    <h1>{{hours}}</h1>
+                    <h3>Learning Hours</h3>
                 </div>
             </li>
         </ul>
@@ -76,99 +137,16 @@
 </section>
 
 <!-- Third Section  -->
-<section class="third-sec padding-lg">
-    <video src="../../assets/programming.mp4" id="prog-video" autoplay loop muted></video>
+<section class="third-sec padding-lg" #target>
+    <img src="../../assets/programming.gif" id="prog-video">
     <div class="container">
         <div class="row heading heading-icon">
-            <h2>Get Started</h2>
+            <h2>Create, Edit and Deploy in</h2>
         </div>
         <ul class="row">
             <li class="col-12 col-md-6 col-lg-3">
-                <div class="cnt-block equal-hight">
-                    <figure><img src="../../assets/angular.png" class="img-responsive" alt="">
-                    </figure>
-                    <h3>Angular</h3>
-                    <p>Typescript</p>
-                    <div class="row snippets">
-                        <div class="col-6">
-                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
-                                public
-                            </mat-icon>
-                            <p>22</p>
-                        </div>
-                        <div class="col-6">
-                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
-                                vpn_lock
-                            </mat-icon>
-                            <p>21</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <mat-icon class="play">play_circle_outline</mat-icon>
-                            <a href="#">Start Coding</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="col-12 col-md-6 col-lg-3">
-                <div class="cnt-block equal-hight">
-                    <figure><img src="../../assets/react.png" class="img-responsive" alt="">
-                    </figure>
-                    <h3>React.JS</h3>
-                    <p>Javascript</p>
-                    <div class="row snippets">
-                        <div class="col-6">
-                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
-                                public
-                            </mat-icon>
-                            <p>15</p>
-                        </div>
-                        <div class="col-6">
-                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
-                                vpn_lock
-                            </mat-icon>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <mat-icon class="play">play_circle_outline</mat-icon>
-                            <a href="#">Start Coding</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="col-12 col-md-6 col-lg-3">
-                <div class="cnt-block equal-hight">
-                    <figure><img src="../../assets/fewd2.png" class="img-responsive" alt="">
-                    </figure>
-                    <h3>FEWD</h3>
-                    <p>HTML, CSS & JS</p>
-                    <div class="row snippets">
-                        <div class="col-6">
-                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
-                                public
-                            </mat-icon>
-                            <p>14</p>
-                        </div>
-                        <div class="col-6">
-                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
-                                vpn_lock
-                            </mat-icon>
-                            <p>9</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <mat-icon class="play">play_circle_outline</mat-icon>
-                            <a href="#">Start Coding</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="col-12 col-md-6 col-lg-3">
-                <div class="cnt-block equal-hight">
+                <div class="cnt-block equal-hight" (click)="runCode('nodejs')">
+                    <span id="new-topic" class="position-absolute">NEW ADDITION</span>
                     <figure><img src="../../assets/nodejs.png" class="img-responsive" alt="">
                     </figure>
                     <h3>Node.JS</h3>
@@ -178,19 +156,103 @@
                             <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
                                 public
                             </mat-icon>
-                            <p>16</p>
+                            <p>{{nodeInfo.public}}</p>
                         </div>
                         <div class="col-6">
                             <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
                                 vpn_lock
                             </mat-icon>
-                            <p>7</p>
+                            <p>{{nodeInfo.private}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <mat-icon class="play">play_circle_outline</mat-icon>
-                            <a href="#">Start Coding</a>
+                            <a>Start Coding</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="col-12 col-md-6 col-lg-3">
+                <div class="cnt-block equal-hight" (click)="runCode('angular')">
+                    <figure><img src="../../assets/angular.png" class="img-responsive" alt="">
+                    </figure>
+                    <h3>Angular</h3>
+                    <p>Typescript</p>
+                    <div class="row snippets">
+                        <div class="col-6">
+                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
+                                public
+                            </mat-icon>
+                            <p>{{angularInfo.public}}</p>
+                        </div>
+                        <div class="col-6">
+                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
+                                vpn_lock
+                            </mat-icon>
+                            <p>{{angularInfo.private}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <mat-icon class="play">play_circle_outline</mat-icon>
+                            <a>Start Coding</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="col-12 col-md-6 col-lg-3">
+                <div class="cnt-block equal-hight" (click)="runCode('react')">
+                    <figure><img src="../../assets/react.png" class="img-responsive" alt="">
+                    </figure>
+                    <h3>React.JS</h3>
+                    <p>Javascript</p>
+                    <div class="row snippets">
+                        <div class="col-6">
+                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
+                                public
+                            </mat-icon>
+                            <p>{{reactInfo.public}}</p>
+                        </div>
+                        <div class="col-6">
+                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
+                                vpn_lock
+                            </mat-icon>
+                            <p>{{reactInfo.private}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <mat-icon class="play">play_circle_outline</mat-icon>
+                            <a>Start Coding</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="col-12 col-md-6 col-lg-3">
+                <div class="cnt-block equal-hight" (click)="runCode('fewd')">
+                    <figure><img src="../../assets/fewd.png" class="img-responsive" alt="">
+                    </figure>
+                    <h3>FEWD</h3>
+                    <p>HTML, CSS & JS</p>
+                    <div class="row snippets">
+                        <div class="col-6">
+                            <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
+                                public
+                            </mat-icon>
+                            <p>{{fewdInfo.public}}</p>
+                        </div>
+                        <div class="col-6">
+                            <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
+                                vpn_lock
+                            </mat-icon>
+                            <p>{{fewdInfo.private}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <mat-icon class="play">play_circle_outline</mat-icon>
+                            <a>Start Coding</a>
                         </div>
                     </div>
                 </div>
@@ -200,42 +262,48 @@
 </section>
 
 <!-- Fourth Section  -->
-<section class="fourth-sec">
+<section class="fourth-sec" #target2>
     <div class="container-fluid">
         <div class="row custom-section d-flex align-items-center">
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6">
                 <img src="../../assets/code2.svg">
             </div>
-            <div class="col-12 col-lg-5">
-                <h2>Why Online Editor?</h2>
-                <p>Purpose-built for rapid web development in the browser</p>
-                <h3>
-                    <mat-icon>stacked_bar_chart</mat-icon> NPM Support
-                </h3>
-                <p>Use Private Packages or any of 1M+ public ones to build powerful apps</p>
-                <h3>
-                    <mat-icon>settings</mat-icon> Optimized for Framework
-                </h3>
-                <p>Custom environment built specifically for each framework</p>
-                <h3>
-                    <mat-icon>keyboard_return</mat-icon> Command Execution
-                </h3>
-                <p>Quickly create prototypes by one click. Explore ideas and iterate more</p>
+            <div class="col-12 col-lg-6">
+                <div class="box">
+                    <mat-icon>stacked_bar_chart</mat-icon>
+                    <h3>NPM Support</h3>
+                    <p>Use Private Packages or any of 1M+ public ones to build powerful apps</p>
+                </div>
+                <div class="box">
+                    <mat-icon>settings</mat-icon>
+                    <h3>Optimized for Framework</h3>
+                    <p>Custom environment built specifically for each framework</p>
+                </div>
+                <div class="box">
+                    <mat-icon>keyboard_return</mat-icon>
+                    <h3>Command Execution</h3>
+                    <p>Quickly create prototypes by one click. Explore ideas and iterate more</p>
+                </div>
+                <div class="box">
+                    <mat-icon>code</mat-icon>
+                    <h3>Learn by Doing</h3>
+                    <p>Complete examples provided in form of Public Snippets to run and edit code on your own</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Fifth Section  -->
-<section class="fifth-sec">
+<section class="fifth-sec" #target3>
     <h2>Build And Collaborate On Projects</h2>
     <div class="content-container">
         <div class="col-container">
             <div class="column-one">
                 <mat-icon>code</mat-icon>
-                <h1 class="xl-font"><b>Create Your Own Code</b></h1>
+                <h1 class="xl-font"><b>Run Your Own Code</b></h1>
                 <h1 class="l-font">Create & Save your snippets on various Frameworks</h1>
-                <a href="#">Learn More</a>
+                <a class="nav-link" (click)="navigateTo('private')">Browse Private Snippets</a>
             </div>
             <div class="column-two">
                 <img class="img-fluid" src="../../assets/createcode.png" alt="CSS">
@@ -251,7 +319,7 @@
                 <mat-icon>public</mat-icon>
                 <h1 class="xl-font"><b>Public Snippet Ready To Help</b></h1>
                 <h1 class="l-font">Explore peer's snippets on various Frameworks</h1>
-                <a href="#">Learn More</a>
+                <a class="nav-link" (click)="navigateTo('public')">Browse Public Snippets</a>
             </div>
         </div>
     </div>
@@ -261,7 +329,7 @@
                 <mat-icon>dashboard</mat-icon>
                 <h1 class="xl-font"><b>Dashboard</b></h1>
                 <h1 class="l-font">Check your learning time based on previous usage</h1>
-                <a href="#">Learn More</a>
+                <a class="nav-link" (click)="navigateTo('dashboard')">Check Dashboard</a>
             </div>
             <div class="column-two">
                 <img class="img-fluid" src="../../assets/dashboard.png">
@@ -270,18 +338,20 @@
     </div>
 </section>
 
-<!-- Sixth Section  -->
-<section class="sixth-sec">
+<!-- Sixth Section -->
+<section class="sixth-sec" #target4>
     <div class="container">
         <div class="row custom-section d-flex align-items-center">
             <div class="col-12 col-lg-6">
                 <h3>Facing Issues?</h3>
-                <h3>Having Feedback?</h3>
+                <h3>Or Having Feedback?</h3>
                 <p>Reach Out to Us</p>
-                <a href="#"><mat-icon>mail</mat-icon> online_editor_team@infosys.com</a>
+                <a href="mailto:OnlineEditor_Team@infosys.com" target="_blank">
+                    <mat-icon>mail</mat-icon> OnlineEditor_Team@infosys.com
+                </a>
             </div>
             <div class="col-12 col-lg-6">
-                <img src="../../assets/support.svg">
+                <img src="../../assets/support.svg" alt="">
             </div>
         </div>
     </div>

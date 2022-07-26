@@ -1,0 +1,24 @@
+{
+    "stats": {
+        "snippets": [
+            {
+                "library": "Angular",
+                "private": 200,
+                "public": 200
+            },
+            {
+                "library": "React",
+                "private": 200,
+                "public": 200
+            },
+            {
+                "library": "FEWD",
+                "private": 200,
+                "public": 200
+            }
+        ],
+        "users": 1378,
+        "libraries": 3,
+        "publicSnippets": 600
+    }
+}
