@@ -1,6 +1,7 @@
 # OnlineEditor
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+Update : Currently the project is updated and migrated to version 17.1.1.
 
 ## Development server
 
