@@ -562,8 +562,9 @@ path.three {
 .third-sec .cnt-block mat-icon.play {
     display: none;
     font-size: 150px;
-    color: #fff;
-    transform: translate(-63px, -160px);
+    height: 150px;
+    width: 150px;
+    transform: translate(45px, -45px);
 }
 
 .third-sec .cnt-block:hover {
@@ -571,20 +572,16 @@ path.three {
 }
 
 .third-sec .cnt-block:hover mat-icon {
-    color: #fff;
+    display: none;
 }
 
 .third-sec .cnt-block:hover mat-icon.play {
     color: #ff1365;
-    display: inline-block;
-}
-
-.third-sec .cnt-block:hover h3 {
-    color: #fff;
+    display: block;
 }
 
 .third-sec .cnt-block:hover p {
-    color: #fff;
+    display: none;
 }
 
 /* Third Section Mobile */
