@@ -139,8 +139,8 @@ h1, h2, h3, p, a {
 }
 
 #button2 mat-icon, #button3 mat-icon, #button4 mat-icon, #button5 mat-icon {
-    -webkit-transform: translate(-12px, 0px) rotate(-45deg);
-    transform: translate(-12px, 0px) rotate(-45deg) scale(1.2);
+    -webkit-transform: translate(-15px, 8px) rotate(-45deg);
+    transform: translate(-15px, 8px) rotate(-45deg) scale(1.2);
 }
 
 #button1 {
@@ -261,7 +261,6 @@ path.three {
     background-image: url(../../assets/wave2.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90%;
 }
 
 .second-sec .row.heading h2 {
@@ -274,7 +273,7 @@ path.three {
 }
 
 .second-sec ul {
-    margin: 0;
+    margin-top: 2em;
     padding: 0;
     list-style: none;
 }
@@ -586,40 +585,6 @@ path.three {
 
 .third-sec .cnt-block:hover p {
     color: #fff;
-}
-
-.third-sec #new-topic {
-    font-family: 'Open Sans';
-    --border-width: 3px;
-    position: relative;
-    width: 236px;
-    font-size: 14px;
-    font-weight: 700;
-    color: whitesmoke;
-    transform: translate(-44px, -29px);
-    text-shadow: 0.3px 0.3px black, -0.3px -0.3px black;
-    border-radius: var(--border-width); 
-}
-
-.third-sec #new-topic::after {
-    position: absolute;
-    content: "";
-    top: calc(-1 * var(--border-width));
-    left: calc(-1 * var(--border-width));
-    z-index: -1;
-    width: calc(100% + var(--border-width) * 2);
-    height: calc(100% + var(--border-width) * 2);
-    background: linear-gradient(60deg, #ff0000, #ff7300, #d43666, #7a00ff, #ff00c8, #ff0000);
-    background-size: 300% 300%;
-    background-position: 0 50%;
-    border-radius: 8px 8px 0px 0px;
-    animation: moveGrad 1.5s alternate infinite;
-}
-
-@keyframes moveGrad {
-    50% {
-        background-position: 100% 50%;
-    }
 }
 
 /* Third Section Mobile */

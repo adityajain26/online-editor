@@ -116,19 +116,19 @@
         <ul class="row">
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>{{users}}</h1>
+                    <h1>{{users/1000}}k</h1>
                     <h3>Unique Users</h3>
                 </div>
             </li>
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>{{projects}}</h1>
+                    <h1>{{projects/1000}}k</h1>
                     <h3>Projects Created</h3>
                 </div>
             </li>
             <li class="col-12 col-md-6 col-lg-4">
                 <div class="cnt-block equal-hight">
-                    <h1>{{hours}}</h1>
+                    <h1>{{hours/1000}}k</h1>
                     <h3>Learning Hours</h3>
                 </div>
             </li>
@@ -146,7 +146,6 @@
         <ul class="row">
             <li class="col-12 col-md-6 col-lg-3">
                 <div class="cnt-block equal-hight" (click)="runCode('nodejs')">
-                    <span id="new-topic" class="position-absolute">NEW ADDITION</span>
                     <figure><img src="../../assets/nodejs.png" class="img-responsive" alt="">
                     </figure>
                     <h3>Node.JS</h3>
@@ -156,13 +155,13 @@
                             <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
                                 public
                             </mat-icon>
-                            <p>{{nodeInfo.public}}</p>
+                            <p>{{nodeInfo.public/1000}}k</p>
                         </div>
                         <div class="col-6">
                             <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
                                 vpn_lock
                             </mat-icon>
-                            <p>{{nodeInfo.private}}</p>
+                            <p>{{nodeInfo.private/1000}}k</p>
                         </div>
                     </div>
                     <div class="row">
@@ -184,13 +183,13 @@
                             <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
                                 public
                             </mat-icon>
-                            <p>{{angularInfo.public}}</p>
+                            <p>{{angularInfo.public/1000}}k</p>
                         </div>
                         <div class="col-6">
                             <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
                                 vpn_lock
                             </mat-icon>
-                            <p>{{angularInfo.private}}</p>
+                            <p>{{angularInfo.private/1000}}k</p>
                         </div>
                     </div>
                     <div class="row">
@@ -212,13 +211,13 @@
                             <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
                                 public
                             </mat-icon>
-                            <p>{{reactInfo.public}}</p>
+                            <p>{{reactInfo.public/1000}}k</p>
                         </div>
                         <div class="col-6">
                             <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
                                 vpn_lock
                             </mat-icon>
-                            <p>{{reactInfo.private}}</p>
+                            <p>{{reactInfo.private/1000}}k</p>
                         </div>
                     </div>
                     <div class="row">
@@ -240,13 +239,13 @@
                             <mat-icon matTooltip="Public Snippets" matTooltipPosition="above">
                                 public
                             </mat-icon>
-                            <p>{{fewdInfo.public}}</p>
+                            <p>{{fewdInfo.public/1000}}k</p>
                         </div>
                         <div class="col-6">
                             <mat-icon matTooltip="Private Snippets" matTooltipPosition="above">
                                 vpn_lock
                             </mat-icon>
-                            <p>{{fewdInfo.private}}</p>
+                            <p>{{fewdInfo.private/1000}}k</p>
                         </div>
                     </div>
                     <div class="row">

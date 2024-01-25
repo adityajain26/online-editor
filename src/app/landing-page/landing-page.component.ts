@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
   @Output() navTo = new EventEmitter();
   @Output() navToLex = new EventEmitter();
   // @Input() data: any;
-  data: any = '{"stats":{"snippets":[{"library":"Angular","private":200,"public":200},{"library":"React","private":200,"public":200},{"library":"FEWD","private":200,"public":200},{"library":"Node.js","private":200,"public":200}],"users":1378,"projects":3,"hours":600}}';
+  data: any = '{"stats":{"snippets":[{"library":"Angular","private":35800,"public":5700},{"library":"React","private":18500,"public":9700},{"library":"FEWD","private":46000,"public":26100},{"library":"Node.js","private":6200,"public":3600}],"users":26400,"projects":151600,"hours":525700}}';
   
   editorInfo: any;
   angularInfo: any;
